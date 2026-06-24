@@ -8,8 +8,8 @@ import ReportView from './components/ReportView';       // ← handles its own e
 import HistoryView from './components/HistoryView';
 import ComparisonView from './components/ComparisonView';
 
-const API_URL = 'http://127.0.0.1:8000/api/v1/analyze';
-
+// const API_URL = 'http://127.0.0.1:8000/api/v1/analyze';
+const API_URL = `${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/api/v1/analyze`;
 export default function App() {
   /* ── State ── */
   const [file, setFile]                     = useState(null);
